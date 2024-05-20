@@ -27,7 +27,7 @@ TEST_DATA_FILENAME = "test_data.csv"
 DATA_TRANSFORMATION_ROOT_DIR = "data-transformation"
 DATA_PROCESSOR_DIR = "processor"
 DATA_TRANSFORMED_DATA_DIR = "transformed-data"
-DATA_PROCESSED_OBJ_FILE_MAME = "model.joblib"
+DATA_PROCESSED_OBJ_FILE_MAME = "processor.joblib"
 DATA_TRANSFORMED_TRAIN_FILENAME = "train_transformed_data.csv"
 DATA_TRANSFORMED_TEST_FILENAME = "test_transformed_data.csv"
 

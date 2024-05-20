@@ -60,6 +60,8 @@ class FeatureEngineering(BaseEstimator, TransformerMixin):
                 "Delivery_person_ID",
                 "Restaurant_latitude",
                 "Restaurant_longitude",
+                "Delivery_location_latitude",
+                "Delivery_location_longitude",
                 "Order_Date",
                 "Time_Orderd",
                 "Time_Order_picked",
@@ -161,7 +163,6 @@ class DataTransformation:
                         ordinal_categorical_columns,
                     ),
                 ],
-                remainder="passthrough",
             )
 
             logging.info("Pipeline has been completed..")
@@ -191,6 +192,18 @@ class DataTransformation:
             train_data = fe_obj.fit_transform(train_data)
             test_data = fe_obj.transform(test_data)
 
+            logging.info("Feature engineered train data ")
+            logging.info(f"{train_data.head()}")
+            print("Feature eng train data is \n")
+            print(train_data.head())
+
+            logging.info("\n")
+            logging.info("Feature engineered test data ")
+            logging.info(f"{test_data.head()}")
+            print("Feature eng test data is \n")
+            print(test_data.head())
+            logging.info("\n")
+
             train_data.to_csv("train_fe_data.csv")
             test_data.to_csv("test_fe_data.csv")
 
@@ -211,6 +224,19 @@ class DataTransformation:
 
             df_train = pd.DataFrame(train_arr)
             df_test = pd.DataFrame(test_arr)
+
+            logging.info("Transformed train data ")
+            logging.info(f"{df_train.head()}")
+            logging.info("\n")
+
+            print("Transformed train data is \n")
+            print(df_train.head())
+
+            logging.info("Transformed test data ")
+            logging.info(f"{df_test.head()}")
+            logging.info("\n")
+            print("Transformed test data is \n")
+            print(df_test.head())
 
             os.makedirs(
                 os.path.dirname(

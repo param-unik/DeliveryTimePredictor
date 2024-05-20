@@ -43,7 +43,9 @@ class DataIngestion:
                 exist_ok=True,
             )
             train_set.to_csv(
-                Path(self.data_ingestion_config.train_data_path), header=True
+                Path(self.data_ingestion_config.train_data_path),
+                header=True,
+                index=False,
             )
 
             os.makedirs(
@@ -51,7 +53,9 @@ class DataIngestion:
                 exist_ok=True,
             )
             test_set.to_csv(
-                Path(self.data_ingestion_config.test_data_path), header=True
+                Path(self.data_ingestion_config.test_data_path),
+                header=True,
+                index=False,
             )
 
             return (
