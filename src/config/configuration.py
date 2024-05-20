@@ -1,0 +1,78 @@
+import os, sys
+from src.constants import *
+
+# dataset file-path
+DATA_FILE_PATH = os.path.join(ROOT_DIR, DATA_DIR, DATA_FILE_NAME)
+
+# raw data file-path
+# example: os.getcwd()/artifacts/data-ingestion/current-timestamp/raw-data/raw-data.csv
+
+RAW_FILE_PATH = os.path.join(
+    ROOT_DIR,
+    ARTIFACTS_DIR,
+    DATA_INGESTION_ROOT_DIR,
+    CURRENT_TIMESTAMP,
+    DATA_INGESTION_RAWDATA_DIR,
+    RAW_DATA_FILENAME,
+)
+
+# train file-path
+TRAIN_FILE_PATH = os.path.join(
+    ROOT_DIR,
+    ARTIFACTS_DIR,
+    DATA_INGESTION_ROOT_DIR,
+    CURRENT_TIMESTAMP,
+    DATA_INGESTION_INGESTED_DATA_DIR,
+    TRAIN_DATA_FILENAME,
+)
+
+# test file-path
+TEST_FILE_PATH = os.path.join(
+    ROOT_DIR,
+    ARTIFACTS_DIR,
+    DATA_INGESTION_ROOT_DIR,
+    CURRENT_TIMESTAMP,
+    DATA_INGESTION_INGESTED_DATA_DIR,
+    TEST_DATA_FILENAME,
+)
+
+# Data transformation
+
+PROCESSED_OBJ_FILE_PATH = os.path.join(
+    ROOT_DIR,
+    ARTIFACTS_DIR,
+    DATA_TRANSFORMATION_ROOT_DIR,
+    DATA_PROCESSOR_DIR,
+    DATA_PROCESSED_OBJ_FILE_MAME,
+)
+
+TRANSFORMED_TRAIN_FILE_PATH = os.path.join(
+    ROOT_DIR,
+    ARTIFACTS_DIR,
+    DATA_TRANSFORMATION_ROOT_DIR,
+    DATA_TRANSFORMED_DATA_DIR,
+    DATA_TRANSFORMED_TRAIN_FILENAME,
+)
+
+TRANSFORMED_TEST_FILE_PATH = os.path.join(
+    ROOT_DIR,
+    ARTIFACTS_DIR,
+    DATA_TRANSFORMATION_ROOT_DIR,
+    DATA_TRANSFORMED_DATA_DIR,
+    DATA_TRANSFORMED_TEST_FILENAME,
+)
+
+FEATURE_ENG_OBJ_FILE_PATH = os.path.join(
+    ROOT_DIR,
+    ARTIFACTS_DIR,
+    DATA_TRANSFORMATION_ROOT_DIR,
+    DATA_PROCESSOR_DIR,
+    "feature-eng.joblib",
+)
+
+
+# Model training
+
+MODEL_OBJECT_FILE_PATH = os.path.join(
+    ROOT_DIR, ARTIFACTS_DIR, MODEL_TRAINER_ROOT_DIR, MODEL_OBJECT_FILE_MAME
+)
